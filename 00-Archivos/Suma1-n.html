@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+	<title>uwu</title>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>reveal.js</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!--Raleway-->
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" rel="prefetch" as ="font" crossorigin>
+		<!--Quicksand-->
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" rel="prefetch" as="font" crossorigin>
+
+		<!--RevealDrawer-->
+		<script src="plugin/drawer/drawer.js"></script>
+		<link rel="stylesheet" href="plugin/drawer/drawer.css" />
+		<!--Geogebra-->
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+		<script>(function(i,s,o,g,r,a,m){var ql=document.querySelectorAll('A[quiz],DIV[quiz],A[data-quiz],DIV[data-quiz]'); if(ql){if(ql.length){for(var k=0;k<ql.length;k++){ql[k].id='quiz-embed-'+k;ql[k].href="javascript:var i=document.getElementById('quiz-embed-"+k+"');try{qz.startQuiz(i)}catch(e){i.start=1;i.style.cursor='wait';i.style.opacity='0.5'};void(0);"}}};i['QP']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://take.quiz-maker.com/3012/CDN/quiz-embed-v1.js','qp');</script>
+		<style>
+
+			b {
+				font-family: Quicksand, sans-serif;
+			}
+
+			p {
+				font-family: Raleway, sans-serif;
+			}
+
+			.main.tools,
+			.main.algebra {
+			margin-left: inherit;
+			background-color: #fff;
+			}
+			.GeoGebraFrame {
+			::-webkit-scrollbar-thumb {
+			background-color: #ccc;
+			background-image: unset;
+			}
+			}
+			th,
+			td {
+			min-width: unset;
+			}
+			.gwt-MenuItem {
+			&::before {
+			display: none;
+			}
+			}
+			ul.gwt-MenuBar {
+			padding-left: 0;
+			li::before {
+			display: none;
+			}
+			}
+			.geo-app {
+			position: relative;
+			width: 100%;
+			contain: content;
+			height: min-content;
+			margin: auto;
+			> div {
+			position: relative;
+			}
+			}
+			.geo-app.ratio-16-9::before {
+			float: left;
+			padding-top: 56.25%;
+			content: "";
+			}
+			.geo-app.ratio-8-3::before {
+			float: left;
+			padding-top: 37.5%;
+			content: "";
+			}
+			@media (prefers-color-scheme: dark) {
+			.geo-app::before {
+			position: absolute;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			background-color: #0007;
+			}
+			}
+
+			.iframe-container {
+    			position: relative;
+    			overflow: hidden;
+    			padding-top: 75%;	
+			}
+			.iframe-container iframe {
+    			position: absolute;
+			    top: 0;
+			    border: 0;
+			    height: 100%;
+			    width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-gradient="linear-gradient(to bottom, rgba(255,0,172,1), rgba(154,0,70,1))">
+					<section data-markdown>
+						<textarea data-template>
+							Para cada \\(n\in\mathbb{N}\\), sea \\(p(n)\\) el enunciado abierto dado por 
+							
+							\\[p(n)\iff \displaystyle\sum_{k=1}^n k=\frac{n(n+1)}{2}\\]
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							Como
+							
+							\\[\displaystyle\sum_{j=1}^1 j=1\land 1=\frac{1(1+1)}{2}\\]
+
+							\\(p(1)\\) es verdadero.
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							Sea \\(k\in\mathbb{N}\\). Si \\(p(k)\\) es verdadero, entonces 
+							
+							\\[\displaystyle\sum_{j=1}^k j=\frac{k(k+1)}{2}\\]
+
+							Luego...
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							\\[\sum_{j=1}^{k+1} j=(k+1)+\sum_{j=1}^k j\\]
+							
+							\\[=(k+1)+\frac{k(k+1)}{2}=\frac{k(k+1)+2(k+1)}{2}\\]
+
+							\\[=\frac{(k+1)(k+2)}{2}\\]
+
+							Por lo tanto, \\(p(k+1)\\) es verdadero.
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							Finalmente, por el **Principio de Inducción matemática**,
+
+							\\[\forall n\in\mathbb{N}:\sum_{k=1}^n k=\frac{n(n+1)}{2}\\]
+						</textarea>
+					</section>
+				</section>
+			</div>
+		</div>
+
+
+
+		</script>
+		<script src="./dist/reveal.js"></script>
+		<script src="./plugin/notes/notes.js"></script>
+		<script src="./plugin/markdown/markdown.js"></script>
+		<script src="./plugin/highlight/highlight.js"></script>
+		<script src="./plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				mathjax3: {
+			 			mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+			 			tex: {
+			   			inlineMath: [ [ '$', '$' ], [ '\\(', '\\)' ]  ]
+			 			},
+			 			options: {
+			   			skipHtmlTags: [ 'script', 'noscript', 'style', 'pre' ]
+			 				},
+						},
+				transition: "convex",
+				backgroundTransition: "convex",
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealDrawer, RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ],
+				dependencies: [
+        			// other dependencies
+        			{ src: 'plugin/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({}); } }
+        			// other dependencies
+    			]
+
+			});
+		</script>
+	</body>
+</html>

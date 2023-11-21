@@ -23,7 +23,7 @@ El objetivo de esta sección es identificar un reto fundamental que está presen
 
 Una fórmula muy conocida establece que la suma de los números naturales del \\(1\\) al \\(n\\), donde \\(n\\) es un número natural, cumple la siguiente igualdad:
 
-$$\sum_{k=1}^n k=\frac{n(n+1)}{2}$$
+$$\sum_{j=1}^n j=\frac{n(n+1)}{2}$$
 {:.math }
 
 En efecto, si sumas los números naturales del \\(1\\) al \\(100\\), el resultado será \\(5050\\), y entonces la igualdad se cumplirá para los primeros cien números naturales. Puedes cambiar el \\(100\\) por un número natural arbitrario y esta igualdad se cumplirá.

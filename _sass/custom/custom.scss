@@ -63,7 +63,7 @@ ul li a {
   display: block !important;
 }
 
-.container {
+.marco-16-9 {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -71,7 +71,7 @@ ul li a {
 }
 
 /* Then style the iframe to fit in the container div with full height and width */
-.responsive-iframe {
+.adaptable {
   position: absolute;
   top: 0;
   left: 0;
