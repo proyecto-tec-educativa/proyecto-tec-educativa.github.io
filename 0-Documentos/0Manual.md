@@ -5,7 +5,7 @@ tema_oscuro: VerdeOscuro
 title: Manual
 description: "Manual de uso"
 last_modified_date: 2023-11-01T09:00:00+0000
-nav_order: 0
+nav_order: 0A
 ---
 
 # Manual para el <span class="deg-sitio deg-sitio-texto">alumno</span>
