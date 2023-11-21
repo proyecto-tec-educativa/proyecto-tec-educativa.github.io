@@ -2,7 +2,7 @@
 layout: default
 search_exclude: true
 title: Inicio 
-nav_order: 00
+nav_order: -1
 description: "Página de inicio con información relevante."
 permalink: /
 last_modified_date: 2023-11-01T09:00:00+0000
