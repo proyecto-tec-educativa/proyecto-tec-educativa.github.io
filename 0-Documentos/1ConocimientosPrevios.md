@@ -1,7 +1,7 @@
 ---
 layout: default
-tema: Verde
-tema_oscuro: VerdeOscuro
+tema: Azul
+tema_oscuro: AzulOscuro
 title: Conocimientos previos
 description: "Actividades previas"
 last_modified_date: 2023-11-01T09:00:00+0000
