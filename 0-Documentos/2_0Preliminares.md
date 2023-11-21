@@ -4,7 +4,7 @@ tema: Naranja
 tema_oscuro: NaranjaOscuro
 title: Preliminares
 description: "Pasos previos al aprendizaje"
-last_modified_date: 2020-09-20T18:00:00+0000
+last_modified_date: 2023-11-01T09:00:00+0000
 has_children: true
 nav_order: 2
 ---

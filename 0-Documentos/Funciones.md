@@ -5,7 +5,7 @@ tema: Verde
 tema_oscuro: VerdeOscuro
 title: <span class="deg-sitio deg-sitio-texto">\( f(x) \)</span>
 description: "Se explican las funcionalidades del sitio y sus limitantes."
-last_modified_date: 2020-08-17T09:00:00+0000
+last_modified_date: 2023-11-01T09:00:00+0000
 parent: Documentos
 nav_order: 2
 ---

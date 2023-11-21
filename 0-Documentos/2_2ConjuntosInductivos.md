@@ -5,7 +5,7 @@ tema: Especial
 tema_oscuro: EspecialOscuro
 title: Conjuntos Inductivos
 description: "Entrenamiento del 14 de marzo de 2020"
-last_modified_date: 2020-03-14T9:00:00+0000
+last_modified_date: 2023-11-01T09:00:00+0000
 parent: Preliminares
 ---
 
