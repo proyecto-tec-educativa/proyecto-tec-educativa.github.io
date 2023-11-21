@@ -1,0 +1,82 @@
+@import "./degradados/degradados.scss";
+@import "./fuentes";
+@import "./imprimir.scss";
+@import "./geogebra.scss";
+
+.tabla td {
+  min-width: 120px !important;
+}
+
+p > mjx-container {
+  overflow-x: scroll;
+}
+
+//Aquellos códigos que no son degradados para ambos
+//Display mathjax
+
+.inline-flex {
+  display: inline-flex;
+}
+
+#markdown-toc {
+  overflow-x: scroll;
+}
+
+.site-title {
+  padding-top: 12px;
+}
+
+.math {
+  overflow-x: scroll;
+}
+
+[class*="deg-"].math {
+  display: table;
+  margin: auto;
+  .MJX-TEX {
+    margin: -1px !important;
+  }
+}
+
+.math-display {
+  margin: 0;
+  .MJX-TEX {
+    padding: 1em 0 !important;
+  }
+  mjx-container {
+    margin: 0 !important;
+  }
+}
+
+p [class*="deg-"].math {
+  display: inline-table;
+}
+
+// Esto sirve para que no haya una barra blanca a la derecha en teléfonos.
+html,
+body {
+  overflow-x: hidden;
+}
+
+// Esto sirve para que las tablas de contenido generadas automáticamente no sobresalgan
+ul li a {
+  display: block !important;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}

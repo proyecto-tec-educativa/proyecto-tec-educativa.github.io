@@ -1,0 +1,246 @@
+/*
+ Tema sin deg-sitios impresión y móvil
+ */
+
+@media not screen and (min-width: map-get($media-queries,md)) and (pointer: fine),
+  (min--moz-device-pixel-ratio: 0) {
+  a {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio));
+  }
+
+  h1:hover,
+  h2:hover,
+  h3:hover,
+  h4:hover,
+  h5:hover,
+  h6:hover {
+    a.anchor-heading {
+      //Los símbolos junto a los encabezados (svg) son el contenido
+      -webkit-background-clip: none;
+      background-clip: none;
+      svg {
+        color: $body-heading-color;
+        mix-blend-mode: unset;
+      }
+    }
+  }
+
+  .search-result-highlight {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio));
+    display: inline-flex;
+  }
+
+  a:hover {
+    @include alter-fondo(
+      map-get($colores-deg-sitio, alter-sitio-texto-color),
+      map-get($colores-deg-sitio, alter-sitio)
+    );
+  }
+
+  a.search-result {
+    color: bg-grey-dk-000;
+    background-image: unset;
+  }
+
+  a:not(.btn) {
+    //Se hacer que el texto tenga la $background-image de fondo.
+
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio));
+    $link-color: #000;
+    //cuando el mouse se posiciona.
+  }
+
+  a:not([class]) {
+    //Con esto se aplica el deg-sitio correctamente a los links sin clase.
+    display: inline-flex;
+    &:hover {
+      color: #7e7e7e;
+      background-color: transparent;
+    }
+  }
+
+  .site-title:hover,
+  .site-button:hover,
+  .nav-list .nav-list-item .nav-list-link:hover,
+  .nav-list .nav-list-item .nav-list-link.active {
+    @include alter-fondo(
+      map-get($colores-deg-sitio, alter-sitio-texto-color),
+      map-get($colores-deg-sitio, alter-sitio)
+    );
+  }
+
+  .nav-list-link:hover,
+  .nav-list-link.active,
+  .nav-list-link:hover *,
+  .nav-list-link.active * {
+    -webkit-text-fill-color: map-get(
+      $colores-deg-sitio,
+      alter-sitio-texto-color
+    ) !important;
+    color: map-get($colores-deg-sitio, alter-sitio-texto-color) !important;
+    border-color: map-get(
+      $colores-deg-sitio,
+      alter-sitio-texto-color
+    ) !important;
+  }
+  .site-button:hover {
+    svg {
+      color: #fff;
+    }
+  }
+  .site-title.lh-tight:hover::before,
+  .site-title.lh-tight:active::before {
+    position: absolute;
+    font-family: QuickSand;
+    content: "PROYECTO";
+  }
+
+  .site-title.lh-tight:hover mjx-container,
+  .site-title.lh-tight:active mjx-container {
+    visibility: hidden;
+  }
+
+  .nav-list-item > .nav-list .nav-list-link {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio));
+  }
+
+  //Esto es duplicado de deg-sitio.
+  .nav-list-link mjx-container {
+    position: static;
+  }
+
+  //Esto cambia los colores para móvil e impresión de todas las clases que no sean las anteriores (links del sitio etc)
+  .deg-sitio {
+    @include alter-fondo(
+      map-get($colores-deg-sitio, alter-sitio-texto-color),
+      map-get($colores-deg-sitio, alter-sitio)
+    );
+  }
+
+  .deg-sitio-texto {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio));
+    display: inline-flex;
+    &::selection {
+      -webkit-text-fill-color: #fff;
+    }
+  }
+
+  /* Let's get this party started */
+  ::-webkit-scrollbar {
+    position: static;
+    width: 0; //Esto es para que en dispositivos móviles la barra no genere un espacio en blanco
+  }
+
+  /* Track
+  ::-webkit-scrollbar-track {
+  }
+  */
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    position: fixed;
+    background-color: $grey-dk-000;
+    border-radius: 10px;
+    @include alter-fondo(
+      map-get($colores-deg-sitio, alter-sitio-texto-color),
+      map-get($colores-deg-sitio, alter-sitio)
+    );
+  }
+
+  /* Let's get this party started */
+  ::-webkit-scrollbar:horizontal {
+    position: static;
+    height: 8px;
+  }
+
+  /* Track
+  ::-webkit-scrollbar-track {
+  }
+  */
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb:horizontal {
+    position: fixed;
+    background-color: $grey-dk-000;
+    border-radius: 10px;
+  }
+
+  //Geogebra
+  //Barra lateral
+  .header-open-landscape {
+    background-color: map-get($colores-deg-sitio, alter-sitio);
+  }
+
+  .deg-sitio.math {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio));
+  }
+
+  /*
+  Mathjax coloreado
+  */
+
+  [class*="deg-"].math {
+    .MJX-TEX {
+      margin: 0;
+      -webkit-text-fill-color: map-get($colores-deg-sitio, alter-sitio);
+      background-color: $body-background-color;
+      mix-blend-mode: unset;
+      * {
+        border-color: map-get($colores-deg-sitio, alter-sitio);
+      }
+    }
+  }
+
+  a .MJX-TEX {
+    margin: 0;
+    -webkit-text-fill-color: inherit;
+    background-color: transparent;
+    mix-blend-mode: unset;
+    * {
+      border-color: inherit;
+    }
+  }
+
+  /*
+  Colores .deg-sitio-n, donde n indica la variable de color del tema cuando no se soportan degradados.
+  En este caso, en modo escritorio actúa de manera normal, pero modifica a voluntad el color en
+  modo de impresión y en móvil. Coloqué 12 porque tiene varios divisores, entre ellos el 6. 
+  Colocar menos era limitado y colocar más era exagerado.
+  */
+  .deg-sitio-1 {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio-1));
+  }
+  .deg-sitio-2 {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio-2));
+  }
+  .deg-sitio-3 {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio-3));
+  }
+  .deg-sitio-4 {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio-4));
+  }
+  .deg-sitio-5 {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio-5));
+  }
+  .deg-sitio-6 {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio-6));
+  }
+  .deg-sitio-7 {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio-7));
+  }
+  .deg-sitio-8 {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio-8));
+  }
+  .deg-sitio-9 {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio-9));
+  }
+  .deg-sitio-10 {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio-10));
+  }
+  .deg-sitio-11 {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio-11));
+  }
+  .deg-sitio-12 {
+    @include alter-texto(map-get($colores-deg-sitio, alter-sitio-12));
+  }
+}
