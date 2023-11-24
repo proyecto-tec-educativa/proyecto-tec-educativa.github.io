@@ -6,6 +6,7 @@ title: Manual
 description: "Manual de uso"
 last_modified_date: 2023-11-01T09:00:00+0000
 nav_order: 0
+has_children: true
 ---
 
 # Manual para el <span class="deg-sitio deg-sitio-texto">alumno</span>
